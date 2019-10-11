@@ -28,6 +28,7 @@ import {
 import { IzendaIntegrate } from './helpers/izenda.integrate';
 import { IzendaReportParts } from './helpers/izenda.reportparts';
 import { AlertComponent } from './components/alert/alert.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { AlertComponent } from './components/alert/alert.component';
     ExportReportComponent,
     ExportReportViewerComponent,
     ExportDashboardViewerComponent,
-    AlertComponent
+    AlertComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

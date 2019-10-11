@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './guards/auth.guard';
 
+/*
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,6 +20,8 @@ import { GovernmentFormComponent } from './pages/dashboards/government/governmen
 
 import { NotFoundComponent } from './services/notfound.component';
 import { IzendaComponent } from './pages/izenda/izenda.component';
+*/
+
 import {
   IzendaHome,
   IzendaSetting,
