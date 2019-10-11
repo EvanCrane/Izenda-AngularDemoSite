@@ -1,0 +1,146 @@
+<header>
+  <!-- Sidebar navigation -->
+  <mdb-sidenav #sidenav class="fixed sidenav-custom" [fixed]="true">
+    <logo>
+      <!-- Logo -->
+      <li>
+        <div class="logo-wrapper waves-light">
+          <a [routerLink]="['/home']">
+            <img src="../../assets/img/izenda-logo1.png" class="img-fluid flex-center">
+          </a>
+        </div>
+      </li>
+      <!--/. Logo -->
+    </logo>
+    <links>
+      <!-- Side navigation links -->
+      <li>
+        <ul class="collapsible collapsible-accordion">
+          <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+            <mdb-item>
+              <mdb-item-head mdbWavesEffect>
+                <mdb-icon fas icon="object-group" class="mr-1"></mdb-icon> Default Examples
+              </mdb-item-head>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/dashboards/dashboard1']" class="waves-effect" mdbWavesEffect>Example 1</a>
+                  </li>
+                </ul>
+              </mdb-item-body>
+            </mdb-item>
+            <mdb-item>
+              <mdb-item-head mdbWavesEffect>
+                <mdb-icon fas icon="medkit" class="mr-1"></mdb-icon> Healthcare
+              </mdb-item-head>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/dashboards/healthcare/dashboard1']" class="waves-effect"
+                      mdbWavesEffect>Healthcare
+                      Dashboard 1</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/dashboards/healthcare/dashboard2']" class="waves-effect"
+                      mdbWavesEffect>Healthcare Dashboard 2</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/dashboards/healthcare/dashboard3']" class="waves-effect"
+                      mdbWavesEffect>Healthcare Dashboard 3</a>
+                  </li>
+                </ul>
+              </mdb-item-body>
+            </mdb-item>
+            <mdb-item>
+              <mdb-item-head mdbWavesEffect>
+                <mdb-icon fas icon="apple-alt" class="mr-1"></mdb-icon> Education
+              </mdb-item-head>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/dashboards/education/dashboard']" class="waves-effect" mdbWavesEffect>Education
+                      Dashboard
+                    </a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/dashboards/education/report-card']" class="waves-effect" mdbWavesEffect>Report
+                      Card Example
+                    </a>
+                  </li>
+                </ul>
+              </mdb-item-body>
+            </mdb-item>
+            <mdb-item>
+              <mdb-item-head mdbWavesEffect>
+                <mdb-icon fas icon="university" class="mr-1"></mdb-icon> Government
+              </mdb-item-head>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/dashboards/government/dashboard']" class="waves-effect"
+                      mdbWavesEffect>Government Dashboard</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/dashboards/government/form-example']" class="waves-effect" mdbWavesEffect>Form
+                      Example</a>
+                  </li>
+                </ul>
+              </mdb-item-body>
+            </mdb-item>
+            <mdb-item class="no-collase">
+              <mdb-item-head mdbWavesEffect [routerLink]="['/izenda']" routerLinkActive="router-link-active">
+                <i class="fa fa-th"></i> Izenda Access
+              </mdb-item-head>
+              <mdb-item-body></mdb-item-body>
+            </mdb-item>
+          </mdb-squeezebox>
+        </ul>
+      </li>
+      <!--/. Side navigation links -->
+    </links>
+  </mdb-sidenav>
+  <!--/. Sidebar navigation -->
+  <!--Navbar-->
+  <mdb-navbar SideClass="navbar navbar-expand-md scrolling-navbar double-nav top-nav" [containerInside]="false">
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-xs-left">
+        <a (click)="sidenav.show()" class="button-collapse-non-fixed">
+          <mdb-icon fas icon="bars"></mdb-icon>
+        </a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+    <logo>
+      <!-- Breadcrumb-->
+      <div class="breadcrumbs breadcrumb-dn mr-auto">
+        <p>Izenda Angular Demo</p>
+      </div>
+      <!--/. Breadcrumb-->
+    </logo>
+    <!-- Navbar brand -->
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngIf="!(isAuthenticated | async)"
+          class="nav-item">
+          <a [routerLink]="['/login']" class="nav-link waves-effect waves-light" href="javascript:void(0)">Log in</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngIf="!(isAuthenticated | async)"
+          class="nav-item active">
+          <a [routerLink]="['/register']" class="nav-link waves-effect waves-light"
+            href="javascript:void(0)">Register</a>
+        </li>
+        <li *ngIf="(isAuthenticated | async)" class="nav-item">
+          <a class="nav-link waves-effect waves-light" href="javascript:void(0)" (click)="logout()" mdbwaveseffect>
+            <span class="clearfix d-none d-sm-inline-block">Log out</span></a>
+        </li>
+        <li *ngIf="(isAuthenticated | async)" class="nav-item">
+          <a class="nav-link">
+            <i class="fas fa-user-circle"></i>{{currentUser | async}}
+          </a>
+        </li>
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/.Navbar-->
+</header>

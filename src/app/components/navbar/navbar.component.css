@@ -1,0 +1,7 @@
+.sidenav-custom {
+  overflow: hidden;
+}
+
+::ng-deep .top-nav {
+  z-index: 999;
+}
