@@ -1,0 +1,48 @@
+<div class="d-md-flex h-md-100 align-items-center">
+  <!-- First Half -->
+  <div class="col-md-8 p-0 bg-izendadefault h-md-100">
+    <div class="row my-4 mx-3 col-12" style="position: absolute;">
+      <logo class="col-4">
+        <div class="logo-wrapper waves-light">
+          <a>
+            <img src="../../assets/img/izenda-logo-small-white.png" class="img-fluid flex-center"
+              style="max-height: 2.5em;">
+          </a>
+        </div>
+      </logo>
+      <ul class="nav justify-content-end col-8 font-izendaheader" style="font-size: 1.5em;">
+        <li class="nav-item col-3"><a class="nav-link color-izendalighttext"
+            href="https://www.izenda.com/why-izenda/">About</a></li>
+        <li class="nav-item col-3"><a class="nav-link color-izendalighttext"
+            href="https://www.izenda.com/pricing/">Pricing</a></li>
+        <li class="nav-item col-3"><a class="nav-link color-izendalighttext" [routerLink]="['/register']">Register</a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-white d-md-flex align-items-center h-100 p-5 text-left justify-content-center">
+      <div class="py-5 col-10">
+        <div class="pb-5">
+          <h1 class="font-izendaheader color-izendalighttext">Embedded BI & Analytics</h1>
+          <h4 class="lead font-izendadefault color-izendalighttext">
+            Reporting and Analytics for SaaS applications
+          </h4>
+        </div>
+        <div class="py-1 px-0 col-8 col-md-10 col-sm-12">
+          <p>Izenda is integrated with your stack, it scales and extends alongside your product. It’s easy to maintain,
+            gives you total ownership, reflects all of your product updates, and lets you focus all your time on
+            building your core application.</p>
+        </div>
+        <div class="pt-5">
+          <a mdbBtn class="bgc-izendaaction" type="button" rounded="true" href="https://www.izenda.com/"
+            mdbWavesEffect>Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Second Half -->
+  <div class="col-md-4 p-0 bg-white h-md-100 loginarea">
+    <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>

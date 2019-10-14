@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<main>
+  <!--Education Dashboard Content-->
+  <div class="container-fluid">
+    <!--Page Header-->
+    <div class="page-header row no-gutters py-4">
+      <!--Title-->
+      <div class="col-sm-4 text-sm-left mb-4 mb-sm-0">
+        <span class="text-uppercase page-subtitle">Overview</span>
+        <h3 class="page-title">Education</h3>
+      </div>
+      <!--Middle Selector-->
+      <div class="col-sm-4 d-flex align-items-center">
+        <div id="viewBtnGroups" class="btn-group btn-group-sm btn-group-toggle d-inline-flex mb-4 mb-sm-0 mx-auto"
+          role="group" aria-label="View actions">
+          <a mdbBtn id="view1btn" class="btn btn-white active" (click)="changeView($event)" mdbWavesEffect>View 1</a>
+          <a mdbBtn id="view2btn" class="btn btn-white" (click)="changeView($event)" mdbWavesEffect>View 2</a>
+        </div>
+      </div>
+      <!--Right Selector-->
+      <div class="col-sm-4 d-flex align-items-center">
+        <!--Dropdown-->
+        <div class="btn-group ml-auto" mdbDropdown>
+          <button mdbDropdownToggle type="button" size="sm" mdbBtn color="light" class="dropdown-toggle waves-light"
+            mdbWavesEffect>
+            Select Year
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item">Action</a>
+            <a class="dropdown-item">Another action</a>
+            <a class="dropdown-item">Something else here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Dashboard View Container-->
+  <section>
+    <app-education-dashview1 id="eduComponent1" class="view-component active-component"></app-education-dashview1>
+    <app-education-dashview2 id="eduComponent2" class="view-component"></app-education-dashview2>
+  </section>
+</main>

@@ -1,0 +1,121 @@
+<!-- Navbar-->
+<app-navbar></app-navbar>
+<main>
+  <div class="container-fluid">
+    <!-- KPIs -->
+    <app-stats-card class="mb-4"></app-stats-card>
+    <!-- Charts -->
+    <section class="my-5">
+      <!-- Card -->
+      <div class="card card-cascade narrower">
+        <!-- Section: Charts -->
+        <section>
+          <div class="row">
+            <div class="col-xl-5 col-lg-12 mr-0">
+              <!--Card image-->
+              <div class="view view-cascade gradient-card-header blue-gradient">
+                <h2 class="h2-responsive mb-0 white-text">General Hospital Information</h2>
+              </div>
+              <!-- Card Content -->
+              <div class="card-body card-body-cascade pb-0">
+                <!--Panel data-->
+                <div class="row card-body py-4">
+                  <!--First column-->
+                  <div class="col-md-12">
+                    <h5>Description</h5>
+                    <p>This is data for general hospital and provider information. The data you see is from
+                      Healthcare.gov</p>
+                  </div>
+                  <!--/First column-->
+                </div>
+                <div class="row card-body py-4">
+                  <!--Second column-->
+                  <div class="col-md-12">
+                    <div id="iChart-geninfo-emergencyservices" class="iChart"></div>
+                  </div>
+                  <!--/Second column-->
+                </div>
+                <div class="row card-body py-4">
+                  <div class="col-md-10">
+                    <h5>Data analysis</h5>
+                    <p py-1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                      in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                </div>
+                <!--/Panel data-->
+              </div>
+            </div>
+            <!-- Chart Area -->
+            <div class="col-xl-7 col-lg-12 my-5">
+              <!-- First Izenda Chart -->
+              <div class="view view-cascade gradient-card-header white my-4">
+                <h3 class="h3-responsive mb-0" style="color: #999999">Timeliness of Care vs Overall Rating</h3>
+                <div id="iChart-geninfo-chart1" class="iChart"></div>
+              </div>
+              <!-- Second Izenda Chart-->
+              <div class="view view-cascade gradient-card-header white my-4">
+                <h3 class="h3-responsive mb-0" style="color: #999999">Average Hospital Rating vs Effectiveness of Care
+                </h3>
+                <div id="iChart-geninfo-chart2" class="iChart"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <div class="row">
+      <!-- Table -->
+      <section class="col-8 justify-content-center">
+        <app-table1></app-table1>
+      </section>
+      <!-- More Chart Sections -->
+      <section class="col-4 justify-content-center">
+        <div [ngClass]="{ 'card card-cascade narrower': true }">
+          <!--Table Header Image-->
+          <div
+            class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+            <a href="" class="white-text mx-3">Payment Information</a>
+          </div>
+          <!--/Card image-->
+          <!-- Table Content -->
+          <div id="iChart-payment-estimatescatter" class="iChart"></div>
+        </div>
+      </section>
+    </div>
+    <section class="justify-content-center mb-5">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-6 my-5">
+          <!--Card-->
+          <panel header="Hospital Type" class="iPanel">
+            <!--Card content-->
+            <div class="card-body text-center">
+              <div id="iChart-geninfo-hospitaltype" class="iChart"></div>
+            </div>
+            <!--/.Card content-->
+          </panel>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-6 col-md-6 my-5">
+          <!--Card-->
+          <panel header="Hospital Ownership" class="iPanel">
+            <!--Card content-->
+            <div class="card-body text-center">
+              <div id="iChart-geninfo-hospitalownership" class="iChart"></div>
+            </div>
+            <!--/.Card content-->
+          </panel>
+          <!--/.Card-->
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+  </div>
+</main>

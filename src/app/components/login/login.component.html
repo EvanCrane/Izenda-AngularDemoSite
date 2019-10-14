@@ -1,0 +1,53 @@
+<!-- Material form login -->
+<alert></alert>
+<mdb-card>
+  <mdb-card-header class="info-color white-text text-center py-4">
+    <h5>
+      <strong>Sign in</strong>
+    </h5>
+  </mdb-card-header>
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5 pt-0">
+    <!-- Form -->
+    <form name="LoginForm" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate class="text-center"
+      style="color: #757575;">
+      <!-- Tenant -->
+      <div [ngClass]="{ 'has-error': f.submitted && !tenantname.valid }" class="md-form">
+        <input name="tenantname" [(ngModel)]="model.tenantname" #tenantname="ngModel" type="text"
+          id="materialLoginFormTenant" class="form-control" [validateSuccess]="false" [validateError]="false"
+          mdbInputDirective>
+        <label for="materialLoginFormTenant">Tenant</label>
+      </div>
+      <!-- Username -->
+      <div [ngClass]="{ 'has-error': f.submitted && !username.valid }" class="md-form">
+        <input name="username" [(ngModel)]="model.username" #username="ngModel" required type="text"
+          id="materialLoginFormUsername" class="form-control" data-error="Invalid Username" data-success=" "
+          mdbInputDirective>
+        <label for="materialLoginFormUsername">Username</label>
+        <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+      </div>
+      <!-- Password -->
+      <div [ngClass]="{ 'has-error': f.submitted && !password.valid }" class="md-form">
+        <input name="password" [(ngModel)]="model.password" #password="ngModel" required type="password"
+          id="materialLoginFormPassword" class="form-control" data-error="Invalid Password" data-success=" "
+          mdbInputDirective>
+        <label for="materialLoginFormPassword">Password</label>
+        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+      </div>
+      <!-- Sign in button -->
+      <div class="md-form text-center mb-3">
+        <button [disabled]="loading" type="button" mdbBtn block="true" rounded="true"
+          class="bgc-izendaaction z-depth-1a waves-light" mdbWavesEffect type="submit">Log in
+        </button>
+        <mdb-spinner *ngIf="loading" spinnerColor="blue"></mdb-spinner>
+      </div>
+      <!-- Register -->
+      <p>Don't have an account?
+        <a [routerLink]="['/register']" routerLinkActive="router-link-active">Register</a>
+      </p>
+      <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+      <!-- Form -->
+    </form>
+  </mdb-card-body>
+</mdb-card>
+<!-- Material form login -->

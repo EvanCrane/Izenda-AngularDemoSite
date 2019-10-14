@@ -1,0 +1,35 @@
+:host ::ng-deep .chart-header {
+  text-align: center;
+}
+
+:host ::ng-deep .chart-header h1 {
+  color: #222222;
+}
+
+:host ::ng-deep .chart-header h2 {
+  color: #222222;
+}
+
+:host ::ng-deep .iChart {
+  height: 15em;
+  width: 100%;
+}
+
+:host ::ng-deep .iGrid {
+  height: 15em;
+  width: 100%;
+}
+
+/* IZENDA FORM OVERWRITES */
+
+:host ::ng-deep .izenda-ScrollBox-Track_horizontal {
+  display: none;
+}
+
+:host ::ng-deep .izenda-ScrollBox-Track_vertical {
+  display: none;
+}
+
+:host ::ng-deep .Reporting-Loading-Overlay {
+  display: none;
+}

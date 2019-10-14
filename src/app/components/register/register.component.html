@@ -1,0 +1,53 @@
+<!-- Material form register -->
+<alert></alert>
+<mdb-card>
+  <mdb-card-header class="info-color white-text text-center py-4">
+    <h5>
+      <strong>Register</strong>
+    </h5>
+  </mdb-card-header>
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5 pt-0">
+    <!-- Form -->
+    <form #f="ngForm" (ngSubmit)="f.form.valid && register()" novalidate class="text-center" style="color: #757575;">
+      <!-- Tenant Name -->
+      <div [ngClass]="{ 'has-error': f.submitted && !tenantname.valid }" class="md-form">
+        <input name="tenantname" [(ngModel)]="model.tenantname" #tenantname="ngModel" type="text"
+          id="materialRegisterFormTenantName" class="form-control" [validateSuccess]="false" [validateError]="false"
+          mdbInputDirective>
+        <label for="materialRegisterFormTenantName">Tenant Name</label>
+      </div>
+      <!-- Username -->
+      <div [ngClass]="{ 'has-error': f.submitted && !username.valid }" class="md-form">
+        <input name="username" [(ngModel)]="model.username" #username="ngModel" required type="text"
+          id="materialRegisterFormUsername" required class="form-control" data-error="Invalid Username" data-success=" "
+          mdbInputDirective>
+        <label for="materialRegisterFormUsername">Username</label>
+        <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+      </div>
+      <!-- Password -->
+      <div [ngClass]="{ 'has-error': f.submitted && !password.valid }" class="md-form mt-0">
+        <input name="password" [(ngModel)]="model.password" #password="ngModel" required type="password"
+          id="materialRegisterFormPassword" class="form-control" data-error="Invalid Password" data-success=" "
+          mdbInputDirective>
+        <label for="materialRegisterFormPassword">Password</label>
+        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+      </div>
+      <!-- Confirm Password -->
+      <div [ngClass]="{ 'has-error': f.submitted && !confirmpassword.valid }" class="md-form">
+        <input name="confirmpassword" [(ngModel)]="model.confirmpassword" #confirmpassword="ngModel" required
+          type="password" id="materialRegisterFormConfirmPassword" class="form-control"
+          aria-describedby="materialRegisterFormConfirmPassword" mdbInputDirective>
+        <label for="materialRegisterFormConfirmPassword">Confirm Password</label>
+        <div *ngIf="f.submitted && !password.valid" class="help-block">Password Confirmation is required</div>
+      </div>
+      <div><span>Have an account? <a [routerLink]="['/login']">Log in</a></span></div>
+      <!-- Sign in button -->
+      <button [disabled]="loading" type="button" mdbBtn gradient="blue" block="true" rounded="true"
+        class="z-depth-1a waves-light" mdbWavesEffect type="submit">Register </button>
+      <mdb-spinner *ngIf="loading" spinnerColor="blue"></mdb-spinner>
+    </form>
+    <!-- Form -->
+  </mdb-card-body>
+</mdb-card>
+<!-- Material form register -->

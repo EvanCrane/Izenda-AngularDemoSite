@@ -1,0 +1,52 @@
+@import url("../../../assets/izenda/izenda-ui.css");
+
+/* Overwrite Izenda Layout */
+:host ::ng-deep .izenda-Main {
+  width: 97vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+:host ::ng-deep .izenda-Footer {
+  display: none !important;
+}
+
+/* Overwrite NgBootstrap */
+:host ::ng-deep .dropdown-toggle::after {
+  all: unset;
+}
+
+:host ::ng-deep ul.nav.nav-tabs.tabs-navigation {
+  display: unset !important;
+  flex-wrap: unset !important;
+}
+
+:host ::ng-deep .success-color {
+  background-color: unset !important;
+}
+
+:host ::ng-deep body {
+  font-weight: unset;
+}
+
+:host ::ng-deep .white-skin .btn-primary {
+  background-color: #fff !important;
+  color: #0071CE !important;
+}
+
+:host ::ng-deep .white-skin .btn-primary.dropdown-toggle {
+  background-color: #fff !important;
+}
+
+:host ::ng-deep .btn-primary.dropdown-toggle {
+  background-color: #fff !important;
+}
+
+:host ::ng-deep .btn-primary {
+  background-color: #fff !important;
+  color: #0071CE !important;
+}
+
+:host ::ng-deep .btn.btn-primary.btn-updateResult {
+  color: #fff !important;
+}

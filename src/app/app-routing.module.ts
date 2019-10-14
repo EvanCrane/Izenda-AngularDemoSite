@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './guards/auth.guard';
 
-/*
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ExportReportComponent, ExportReportViewerComponent, ExportDashboardViewerComponent } from './export/index';
-import { LandingComponent } from './pages/landing/landing.component';
+
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
+
+import { ExportReportComponent, ExportReportViewerComponent, ExportDashboardViewerComponent } from './components/izenda-components/export/index';
+
+import { LandingComponent } from './components/landing/landing.component';
+
 import { Dashboard1Component  as HealthcareDashboard1 } from './views/dashboards/healthcare/dashboard1/dashboard1.component';
 import { Dashboard2Component as HealthcareDashboard2 } from './views/dashboards/healthcare/dashboard2/dashboard2.component';
 import { Dashboard3Component  as HealthcareDashboard3 } from './views/dashboards/healthcare/dashboard3/dashboard3.component';
@@ -18,9 +21,10 @@ import { GovernmentDashboardComponent } from './pages/dashboards/government/gove
 import { GovernmentFormComponent } from './pages/dashboards/government/government-form/government-form.component';
 
 
-import { NotFoundComponent } from './services/notfound.component';
-import { IzendaComponent } from './pages/izenda/izenda.component';
-*/
+
+import { NotFoundComponent } from './components/notfound/notfound.component';
+import { IzendaComponent } from './components/izenda/izenda.component';
+
 
 import {
   IzendaHome,
