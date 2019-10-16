@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {IzendaIntegrate} from '../helpers/izendaintegrate';
+import {IzendaIntegrate} from '../../helpers/izenda.integrate';
 
 
 @Component({

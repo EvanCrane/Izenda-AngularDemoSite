@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IzendaIntegrate } from './izenda.integrate;
+import { IzendaIntegrate } from './izenda.integrate';
 
 @Injectable()
 export class IzendaReportParts {

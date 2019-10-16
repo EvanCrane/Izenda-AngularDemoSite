@@ -59,9 +59,11 @@ export class AuthenticationService {
     const token = localStorage.getItem('tokenKey');
     let headers: Headers;
     if (token) {
+
       headers = new Headers({ 'Authorization': 'Bearer ' + token });
     }
     const body = {};
+
     const options: RequestOptions = new RequestOptions({ headers: headers });
 
     return this.http.post(url, body, options)

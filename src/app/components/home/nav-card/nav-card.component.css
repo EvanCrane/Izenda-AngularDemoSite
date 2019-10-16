@@ -10,24 +10,24 @@
 /* Card Ids */
 #cardbg-default {
   /* background-image: url('../../../assets/img/izenda-logo1.png'); */
-  background-image: url('../../../assets/img/Insurance.png');
+  background-image: url('../../../../assets/img/Insurance.png');
   background-color: #cccccc
 }
 
 #cardbg-med {
   /* background-image: url('../../../assets/img/med1.jpg'); */
-  background-image: url('../../../assets/img/Healthcare.png');
+  background-image: url('../../../../assets/img/Healthcare.png');
   background-color: #cccccc
 }
 
 #cardbg-edu {
   /* background-image: url('../../../assets/img/edu1.jpg'); */
-  background-image: url('../../../assets/img/Education.png');
+  background-image: url('../../../../assets/img/Education.png');
   background-color: #cccccc
 }
 
 #cardbg-gov {
   /* background-image: url('../../../assets/img/gov1.jpg'); */
-  background-image: url('../../../assets/img/Government.png');
+  background-image: url('../../../../assets/img/Government.png');
   background-color: #cccccc
 }

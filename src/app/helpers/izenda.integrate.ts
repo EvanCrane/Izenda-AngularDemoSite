@@ -10,25 +10,25 @@ export class IzendaIntegrate {
 
     DoIzendaConfig(): void {
         IzendaSynergy.config({
-            'WebApiUrl': 'http://157.230.224.75:81/api/',
-            'BaseUrl': '/',
-            'RootPath': '/assets/izenda',
-            'CssFile': 'izenda-ui.css',
-            'Routes': {
-                'ReportDesigner': 'reportdesigner',
-                'Report': 'report',
-                'ReportViewer': 'reportviewer',
-                'ReportViewerPopup': 'reportviewerpopup',
-                'Viewer': 'viewer',
-                'Dashboard': 'dashboard',
-                'New': 'new',
-                'Settings': 'settings',
-                'Account': 'account',
-                'MyProfile': 'myprofile',
+            WebApiUrl: 'http://localhost:3505/api/',
+            BaseUrl: '/',
+            RootPath: '/assets/izenda',
+            CssFile: 'izenda-ui.css',
+            Routes: {
+                ReportDesigner: 'reportdesigner',
+                Report: 'report',
+                ReportViewer: 'reportviewer',
+                ReportViewerPopup: 'reportviewerpopup',
+                Viewer: 'viewer',
+                Dashboard: 'dashboard',
+                New: 'new',
+                Settings: 'settings',
+                Account: 'account',
+                MyProfile: 'myprofile',
             },
-            'Timeout': 3600,
-            'NeedToEncodeUrl': false,
-            'OnReceiveUnauthorizedResponse': this.redirectToLoginPage,
+            Timeout: 3600,
+            NeedToEncodeUrl: false,
+            OnReceiveUnauthorizedResponse: this.redirectToLoginPage,
         });
     }
 
@@ -84,8 +84,8 @@ export class IzendaIntegrate {
     RenderReportCustomizedFilterViewer() {
         this.setContext();
         const filtersObj: any = {
-            'filters': [],
-            'overridingFilterValue':
+            filters: [],
+            overridingFilterValue:
             {  // filter object to pass to api
                 // override filter value at position 1 which is applying on current report, change >30 to >50
                 p1value: 50,
@@ -108,15 +108,15 @@ export class IzendaIntegrate {
     UpdateResultReportPart(reportPartId: string, overridingFilterValue: any, containerId: string) {
         this.setContext();
         IzendaSynergy.renderReportPart(document.getElementById(containerId), {
-            'id': reportPartId,
-            'overridingFilterValue': overridingFilterValue,
+            id: reportPartId,
+            overridingFilterValue,
         });
     }
 
     RenderSingleReportPart(reportPartId: string, containerId: string) {
         this.setContext();
         IzendaSynergy.renderReportPart(document.getElementById(containerId), {
-            'id': reportPartId
+            id: reportPartId
         });
     }
 
@@ -156,8 +156,8 @@ export class IzendaIntegrate {
         // select the target node
         const target = document.getElementById(targetId);
 
-        const observer = new MutationObserver(function (mutations) {
-            mutations.forEach(function (mutation) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
                 const progressBar = document.getElementById(progressBarId);
                 if (progressBar) {
                     progressBar.style.display = 'none';

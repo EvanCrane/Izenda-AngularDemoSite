@@ -8,13 +8,13 @@ import { EduDashview2Component } from '../edu-dashview2/edu-dashview2.component'
   styleUrls: ['./edu-dashboard1.component.css']
 })
 export class EduDashboard1Component implements OnInit {
-  @ViewChild(EduDashview1Component) dashview1;
-  @ViewChild(EduDashview2Component) dashview2;
+  @ViewChild(EduDashview1Component, { static: false }) dashview1;
+  @ViewChild(EduDashview2Component, { static: false }) dashview2;
 
 
-  initComponent: Boolean;
-  initRefreshView1Count: Boolean;
-  initRefreshView2Count: Boolean;
+  initComponent: boolean;
+  initRefreshView1Count: boolean;
+  initRefreshView2Count: boolean;
   constructor() {
     this.initComponent = true;
     this.initRefreshView1Count = false;

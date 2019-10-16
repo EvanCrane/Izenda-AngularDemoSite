@@ -9,7 +9,7 @@ import { AuthenticationService } from '../../services/authentication.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  @ViewChild('sidenav') sidenav: ElementRef;
+  @ViewChild('sidenav', {static: false}) sidenav;
   currentUser: Observable<string>;
   isAuthenticated: Observable<boolean>;
   clicked: boolean;

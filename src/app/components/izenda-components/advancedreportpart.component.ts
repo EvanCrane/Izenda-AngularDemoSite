@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {IzendaIntegrate} from '../helpers/izendaintegrate';
+import { IzendaIntegrate } from '../../helpers/izenda.integrate';
 
 
 @Component({
@@ -7,11 +7,12 @@ import {IzendaIntegrate} from '../helpers/izendaintegrate';
     styleUrls: ['advancedreportpart.component.css']
 })
 
+// tslint:disable-next-line: component-class-suffix
 export class AdvancedReportPart implements AfterViewInit {
     selectedPart: number;
 
     constructor(private izItergrate: IzendaIntegrate) {
-     }
+    }
 
     ngAfterViewInit() {
         this.updateResultReportPart('');
@@ -33,17 +34,17 @@ export class AdvancedReportPart implements AfterViewInit {
         switch (partNumber) {
             case 1: {
                 reportPartId = '[your_1st_report_part_id]';
-               break;
+                break;
             }
             case 2: {
                 reportPartId = '[your_2nd_report_part_id]';
-               break;
+                break;
             }
             case 3: {
                 reportPartId = '[your_3rd_report_part_id]';
                 break;
-             }
-         }
+            }
+        }
 
         this.izItergrate.RenderSingleReportPart(reportPartId, 'update-alone');
         this.izItergrate.HideIzenaProgressBar('update-alone', 'reportPartLoader');
