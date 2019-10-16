@@ -1,0 +1,16 @@
+.izenda-kpi-number {
+  height: 3em;
+}
+
+div.izenda-kpi-number ::ng-deep span {
+  font-size: 48px !important;
+}
+
+.izenda-kpi-number>div {
+  min-height: inherit;
+  min-width: inherit;
+}
+
+.izenda-kpi-number>div>* {
+  background: black;
+}
