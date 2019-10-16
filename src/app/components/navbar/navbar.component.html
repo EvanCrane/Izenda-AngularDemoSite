@@ -6,7 +6,7 @@
       <li>
         <div class="logo-wrapper waves-light">
           <a [routerLink]="['/home']">
-            <img src="../../assets/img/izenda-logo1.png" class="img-fluid flex-center">
+            <img src="../../../assets/img/SouthwindLogo.png" class="img-fluid flex-center">
           </a>
         </div>
       </li>
@@ -19,12 +19,13 @@
           <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
             <mdb-item>
               <mdb-item-head mdbWavesEffect>
-                <mdb-icon fas icon="object-group" class="mr-1"></mdb-icon> Default Examples
+                <mdb-icon fas icon="object-group" class="mr-1"></mdb-icon> Insurance
               </mdb-item-head>
               <mdb-item-body>
                 <ul>
                   <li>
-                    <a [routerLink]="['/dashboards/dashboard1']" class="waves-effect" mdbWavesEffect>Example 1</a>
+                    <a [routerLink]="['/dashboards/insurance/dashboard']" class="waves-effect" mdbWavesEffect>Insurance
+                      Dashboard</a>
                   </li>
                 </ul>
               </mdb-item-body>
@@ -36,17 +37,8 @@
               <mdb-item-body>
                 <ul>
                   <li>
-                    <a [routerLink]="['/dashboards/healthcare/dashboard1']" class="waves-effect"
-                      mdbWavesEffect>Healthcare
-                      Dashboard 1</a>
-                  </li>
-                  <li>
-                    <a [routerLink]="['/dashboards/healthcare/dashboard2']" class="waves-effect"
-                      mdbWavesEffect>Healthcare Dashboard 2</a>
-                  </li>
-                  <li>
-                    <a [routerLink]="['/dashboards/healthcare/dashboard3']" class="waves-effect"
-                      mdbWavesEffect>Healthcare Dashboard 3</a>
+                    <a [routerLink]="['/dashboards/healthcare/dashboard']" class="waves-effect"
+                      mdbWavesEffect>Healthcare Dashboard</a>
                   </li>
                 </ul>
               </mdb-item-body>
@@ -59,17 +51,12 @@
                 <ul>
                   <li>
                     <a [routerLink]="['/dashboards/education/dashboard']" class="waves-effect" mdbWavesEffect>Education
-                      Dashboard
-                    </a>
-                  </li>
-                  <li>
-                    <a [routerLink]="['/dashboards/education/report-card']" class="waves-effect" mdbWavesEffect>Report
-                      Card Example
-                    </a>
+                      Dashboard</a>
                   </li>
                 </ul>
               </mdb-item-body>
             </mdb-item>
+
             <mdb-item>
               <mdb-item-head mdbWavesEffect>
                 <mdb-icon fas icon="university" class="mr-1"></mdb-icon> Government
@@ -80,18 +67,34 @@
                     <a [routerLink]="['/dashboards/government/dashboard']" class="waves-effect"
                       mdbWavesEffect>Government Dashboard</a>
                   </li>
-                  <li>
-                    <a [routerLink]="['/dashboards/government/form-example']" class="waves-effect" mdbWavesEffect>Form
-                      Example</a>
-                  </li>
                 </ul>
               </mdb-item-body>
             </mdb-item>
-            <mdb-item class="no-collase">
-              <mdb-item-head mdbWavesEffect [routerLink]="['/izenda']" routerLinkActive="router-link-active">
-                <i class="fa fa-th"></i> Izenda Access
+
+            <mdb-item>
+              <mdb-item-head mdbWavesEffect>
+                <i class="fa fa-th"></i>Izenda Access
               </mdb-item-head>
-              <mdb-item-body></mdb-item-body>
+              <mdb-item-body>
+                <ul>
+                  <li>
+                    <a [routerLink]="['/izenda']" routerLinkActive="router-link-active" class="waves-effect"
+                      mdbWavesEffect>Full Izenda Page</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/izenda/report']" routerLinkActive="router-link-active" class="waves-effect"
+                      mdbWavesEffect>Report List</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/izenda/reportdesigner']" routerLinkActive="router-link-active"
+                      class="waves-effect" mdbWavesEffect>Report Designer</a>
+                  </li>
+                  <li>
+                    <a [routerLink]="['/izenda/settings']" routerLinkActive="router-link-active" class="waves-effect"
+                      mdbWavesEffect>Settings</a>
+                  </li>
+                </ul>
+              </mdb-item-body>
             </mdb-item>
           </mdb-squeezebox>
         </ul>
