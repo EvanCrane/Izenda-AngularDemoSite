@@ -8,7 +8,11 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 
-import { ExportReportComponent, ExportReportViewerComponent, ExportDashboardViewerComponent } from './components/izenda-components/export/index';
+import {
+  ExportReportComponent,
+  ExportReportViewerComponent,
+  ExportDashboardViewerComponent
+} from './components/izenda-components/export/index';
 
 import { LandingComponent } from './components/landing/landing.component';
 
@@ -76,7 +80,7 @@ const routes: Routes = [
   // { path: 'dashboards/education/report-card', component: ReportCardComponent, canActivate: [AuthGuard] },
 
   { path: 'dashboards/government/dashboard', component: GovDashboard1Component, canActivate: [AuthGuard] },
-  //{ path: 'dashboards/government/form-example', component: GovernmentFormComponent, canActivate: [AuthGuard] },
+  // { path: 'dashboards/government/form-example', component: GovernmentFormComponent, canActivate: [AuthGuard] },
 
   { path: 'dashboards/insurance/dashboard', component: InsuranceDashboard1Component, canActivate: [AuthGuard] },
 

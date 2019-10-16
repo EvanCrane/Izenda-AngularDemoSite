@@ -3,9 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+// MDB Angular Pro
+import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
+import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
+
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { AuthGuard } from './guards/auth.guard';
+import { AuthenticationService } from './services/authentication.service';
+import { UserService } from './services/user.service';
+import { DomService } from './services/dom.service';
+import { CanDeactivateGuard } from './guards/can-deactivate.guard';
+
+import { SharedModule } from './shared/shared.module';
 import {
   Dashboard,
   DashboardDesigner,
@@ -27,7 +42,6 @@ import {
 
 import { IzendaIntegrate } from './helpers/izenda.integrate';
 import { IzendaReportParts } from './helpers/izenda.reportparts';
-import { AlertComponent } from './components/alert/alert.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -46,6 +60,12 @@ import { GovDashview3Component } from './components/government/gov-dashview3/gov
 import { EduDashview1Component } from './components/education/edu-dashview1/edu-dashview1.component';
 import { EduDashview2Component } from './components/education/edu-dashview2/edu-dashview2.component';
 import { InsuranceDashboard1Component } from './components/insurance/insurance-dashboard1/insurance-dashboard1.component';
+import { NavCardComponent } from './components/home/nav-card/nav-card.component';
+import { StatsCardComponent } from './components/healthcare/stats-card/stats-card.component';
+import { StatsCard2Component } from './components/healthcare/stats-card2/stats-card2.component';
+import { StatsCard3Component } from './components/healthcare/stats-card3/stats-card3.component';
+import { StatsCard4Component } from './components/healthcare/stats-card4/stats-card4.component';
+
 
 
 @NgModule({
@@ -67,7 +87,6 @@ import { InsuranceDashboard1Component } from './components/insurance/insurance-d
     ExportReportComponent,
     ExportReportViewerComponent,
     ExportDashboardViewerComponent,
-    AlertComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent,
@@ -85,13 +104,29 @@ import { InsuranceDashboard1Component } from './components/insurance/insurance-d
     GovDashview3Component,
     EduDashview1Component,
     EduDashview2Component,
-    InsuranceDashboard1Component
+    InsuranceDashboard1Component,
+    NavCardComponent,
+    StatsCardComponent,
+    StatsCard2Component,
+    StatsCard3Component,
+    StatsCard4Component,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    FormsModule,
+    // tslint:disable-next-line: deprecation
+    HttpModule,
+    MDBBootstrapModulesPro.forRoot()
   ],
   providers: [
+    MDBSpinningPreloader,
+    AuthGuard,
+    AuthenticationService,
+    UserService,
+    DomService,
+    CanDeactivateGuard,
     IzendaIntegrate,
     IzendaReportParts
   ],
