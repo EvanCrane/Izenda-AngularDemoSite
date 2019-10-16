@@ -12,6 +12,13 @@ import { ExportReportComponent, ExportReportViewerComponent, ExportDashboardView
 
 import { LandingComponent } from './components/landing/landing.component';
 
+
+import { HealthDashboard1Component } from './components/healthcare/health-dashboard1/health-dashboard1.component';
+import { EduDashboard1Component } from './components/education/edu-dashboard1/edu-dashboard1.component';
+import { GovDashboard1Component } from './components/government/gov-dashboard1/gov-dashboard1.component';
+import { InsuranceDashboard1Component } from './components/insurance/insurance-dashboard1/insurance-dashboard1.component';
+
+/*
 import { Dashboard1Component  as HealthcareDashboard1 } from './views/dashboards/healthcare/dashboard1/dashboard1.component';
 import { Dashboard2Component as HealthcareDashboard2 } from './views/dashboards/healthcare/dashboard2/dashboard2.component';
 import { Dashboard3Component  as HealthcareDashboard3 } from './views/dashboards/healthcare/dashboard3/dashboard3.component';
@@ -19,8 +26,7 @@ import { EducationDashboardComponent } from './pages/dashboards/education/educat
 import { ReportCardComponent } from './pages/dashboards/education/report-card/report-card.component';
 import { GovernmentDashboardComponent } from './pages/dashboards/government/government-dashboard/government-dashboard.component';
 import { GovernmentFormComponent } from './pages/dashboards/government/government-form/government-form.component';
-
-
+*/
 
 import { NotFoundComponent } from './components/notfound/notfound.component';
 import { IzendaComponent } from './components/izenda/izenda.component';
@@ -38,7 +44,7 @@ import {
   DashboardDesigner,
   Dashboard,
   DashboardViewer
-} from './izenda-components/index';
+} from './components/izenda-components/index';
 import { PathLocationStrategy } from '@angular/common';
 import { CanDeactivateGuard } from './guards/can-deactivate.guard';
 
@@ -60,13 +66,20 @@ const routes: Routes = [
   { path: 'izenda/dashboard', component: Dashboard, canActivate: [AuthGuard] },
   { path: 'izenda/dashboardviewer', component: DashboardViewer, canActivate: [AuthGuard] },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'dashboards/healthcare/dashboard1', component: HealthcareDashboard1, canActivate: [AuthGuard] },
-  { path: 'dashboards/healthcare/dashboard2', component: HealthcareDashboard2, canActivate: [AuthGuard] },
-  { path: 'dashboards/healthcare/dashboard3', component: HealthcareDashboard3, canActivate: [AuthGuard] },
-  { path: 'dashboards/education/dashboard', component: EducationDashboardComponent, canActivate: [AuthGuard] },
-  { path: 'dashboards/education/report-card', component: ReportCardComponent, canActivate: [AuthGuard] },
-  { path: 'dashboards/government/dashboard', component: GovernmentDashboardComponent, canActivate: [AuthGuard] },
-  { path: 'dashboards/government/form-example', component: GovernmentFormComponent, canActivate: [AuthGuard] },
+
+  { path: 'dashboards/healthcare/dashboard1', component: HealthDashboard1Component, canActivate: [AuthGuard] },
+
+  // { path: 'dashboards/healthcare/dashboard2', component: HealthcareDashboard2, canActivate: [AuthGuard] },
+  // { path: 'dashboards/healthcare/dashboard3', component: HealthcareDashboard3, canActivate: [AuthGuard] },
+
+  { path: 'dashboards/education/dashboard', component: EduDashboard1Component, canActivate: [AuthGuard] },
+  // { path: 'dashboards/education/report-card', component: ReportCardComponent, canActivate: [AuthGuard] },
+
+  { path: 'dashboards/government/dashboard', component: GovDashboard1Component, canActivate: [AuthGuard] },
+  //{ path: 'dashboards/government/form-example', component: GovernmentFormComponent, canActivate: [AuthGuard] },
+
+  { path: 'dashboards/insurance/dashboard', component: InsuranceDashboard1Component, canActivate: [AuthGuard] },
+
   // export route
   { path: 'viewer/reportpart/:id', component: ExportReportComponent },
   { path: 'report/view/:id', component: ExportReportViewerComponent },

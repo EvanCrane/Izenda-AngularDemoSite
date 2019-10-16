@@ -45,6 +45,7 @@ import { GovDashview2Component } from './components/government/gov-dashview2/gov
 import { GovDashview3Component } from './components/government/gov-dashview3/gov-dashview3.component';
 import { EduDashview1Component } from './components/education/edu-dashview1/edu-dashview1.component';
 import { EduDashview2Component } from './components/education/edu-dashview2/edu-dashview2.component';
+import { InsuranceDashboard1Component } from './components/insurance/insurance-dashboard1/insurance-dashboard1.component';
 
 
 @NgModule({
@@ -83,7 +84,8 @@ import { EduDashview2Component } from './components/education/edu-dashview2/edu-
     GovDashview2Component,
     GovDashview3Component,
     EduDashview1Component,
-    EduDashview2Component
+    EduDashview2Component,
+    InsuranceDashboard1Component
   ],
   imports: [
     BrowserModule,

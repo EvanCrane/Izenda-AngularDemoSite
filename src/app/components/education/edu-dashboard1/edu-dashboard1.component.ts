@@ -1,15 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { EducationDashview1Component } from '../../../../views/dashboards/education/education-dashview1/education-dashview1.component';
-import { EducationDashview2Component } from '../../../../views/dashboards/education/education-dashview2/education-dashview2.component';
+import { EduDashview1Component } from '../edu-dashview1/edu-dashview1.component';
+import { EduDashview2Component } from '../edu-dashview2/edu-dashview2.component';
 
 @Component({
-  selector: 'app-education-dashboard',
-  templateUrl: './education-dashboard.component.html',
-  styleUrls: ['./education-dashboard.component.css']
+  selector: 'app-edu-dashboard1',
+  templateUrl: './edu-dashboard1.component.html',
+  styleUrls: ['./edu-dashboard1.component.css']
 })
-export class EducationDashboardComponent implements OnInit {
-  @ViewChild(EducationDashview1Component) dashview1;
-  @ViewChild(EducationDashview2Component) dashview2;
+export class EduDashboard1Component implements OnInit {
+  @ViewChild(EduDashview1Component) dashview1;
+  @ViewChild(EduDashview2Component) dashview2;
 
 
   initComponent: Boolean;

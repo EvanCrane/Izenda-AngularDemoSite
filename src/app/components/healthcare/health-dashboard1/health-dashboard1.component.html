@@ -1,121 +1,169 @@
-<!-- Navbar-->
 <app-navbar></app-navbar>
 <main>
+  <!-- Dashboard Content -->
   <div class="container-fluid">
-    <!-- KPIs -->
-    <app-stats-card class="mb-4"></app-stats-card>
-    <!-- Charts -->
-    <section class="my-5">
-      <!-- Card -->
+    <!-- Page Header -->
+    <div class="page-header row no-gutters">
+      <div class="col-md-9">
+        <h1>Healthcare Analytics</h1>
+      </div>
+      <div class="col-3">
+        <div class="dropdown" mdbDropdown>
+          <button mdbDropdownToggle mdbBtn color="white" class="dropdown-toggle waves-light text-dark pt-2 pb-1"
+            type="button" mdbWavesEffect>
+            <h6>Select Year <img src="../../../../../assets/img/icons8-down-button-50.png" width="15" height="15"></h6>
+          </button>
+          <div class="dropdown-menu dropdown-primary">
+            <a class="dropdown-item">This Year</a>
+            <a class="dropdown-item">Last Year</a>
+            <a class="dropdown-item">Last 3 Years</a>
+            <a class="dropdown-item">All Time</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Stat Cards-->
+    <app-stats-card3></app-stats-card3>
+    <!-- Charts Row 1 -->
+    <section>
       <div class="card card-cascade narrower">
-        <!-- Section: Charts -->
+        <!--Section: Chart-->
         <section>
+          <!--Grid row-->
           <div class="row">
-            <div class="col-xl-5 col-lg-12 mr-0">
+            <!--Grid column-->
+            <div class="col mr-0">
               <!--Card image-->
-              <div class="view view-cascade gradient-card-header blue-gradient">
-                <h2 class="h2-responsive mb-0 white-text">General Hospital Information</h2>
+              <div class="view view-cascade gradient-card-header light-blue lighten-1">
+                <h2 class="h2-responsive mb-0 white-text">Healthcare Payment Analysis</h2>
               </div>
-              <!-- Card Content -->
+              <!--/Card image-->
+              <!--Card content-->
               <div class="card-body card-body-cascade pb-0">
                 <!--Panel data-->
-                <div class="row card-body py-4">
+                <div class="row card-body pt-3 px-4">
                   <!--First column-->
-                  <div class="col-md-12">
-                    <h5>Description</h5>
-                    <p>This is data for general hospital and provider information. The data you see is from
-                      Healthcare.gov</p>
+                  <div class="col">
+                    <!--KPI Data Area-->
+                    <h3>
+                      <div id="iForm-totalpayments-kpi" class="izenda-kpi-number"></div>
+                    </h3>
                   </div>
                   <!--/First column-->
                 </div>
-                <div class="row card-body py-4">
-                  <!--Second column-->
-                  <div class="col-md-12">
-                    <div id="iChart-geninfo-emergencyservices" class="iChart"></div>
+                <hr>
+                <!--Panel data-->
+                <div class="row card-body py-3 px-4">
+                  <div class="col-2 py-4">
+                    <mdb-icon fas icon="hand-holding-usd" size="3x" class="green-text pr-3" aria-hidden="true">
+                    </mdb-icon>
                   </div>
-                  <!--/Second column-->
-                </div>
-                <div class="row card-body py-4">
-                  <div class="col-md-10">
-                    <h5>Data analysis</h5>
-                    <p py-1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                      in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <!--KPI Data Area-->
+                  <div class="col-10">
+                    <div id="iForm-averagepayment-kpi" class="izenda-kpi-textarea"></div>
                   </div>
                 </div>
                 <!--/Panel data-->
               </div>
+              <!--/.Card content-->
             </div>
-            <!-- Chart Area -->
-            <div class="col-xl-7 col-lg-12 my-5">
-              <!-- First Izenda Chart -->
-              <div class="view view-cascade gradient-card-header white my-4">
-                <h3 class="h3-responsive mb-0" style="color: #999999">Timeliness of Care vs Overall Rating</h3>
-                <div id="iChart-geninfo-chart1" class="iChart"></div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-xl-8 col-lg-12 my-5">
+              <!--Card image-->
+              <div class="view view-cascade gradient-card-header blue-gradient">
+                <div class="row justify-content-center pb-3">
+                  <a class="activator px-3 mr-2" style="color: white;"
+                    onclick="alert('Scatter Analysis Options. Izneda can integrate many features...');">
+                    <i class="fas fa-share-alt"></i>
+                  </a>
+                  <h4>Scatter Analysis</h4>
+                </div>
+                <!-- Izenda Report Part Area -->
+                <div id="iChart-paymentestimate-scatter" class="iChart"></div>
               </div>
-              <!-- Second Izenda Chart-->
-              <div class="view view-cascade gradient-card-header white my-4">
-                <h3 class="h3-responsive mb-0" style="color: #999999">Average Hospital Rating vs Effectiveness of Care
-                </h3>
-                <div id="iChart-geninfo-chart2" class="iChart"></div>
-              </div>
+              <!--/Card image-->
             </div>
+            <!--Grid column-->
           </div>
+          <!--Grid row-->
         </section>
+        <!--Section: Chart-->
       </div>
     </section>
-    <div class="row">
-      <!-- Table -->
-      <section class="col-8 justify-content-center">
-        <app-table1></app-table1>
-      </section>
-      <!-- More Chart Sections -->
-      <section class="col-4 justify-content-center">
-        <div [ngClass]="{ 'card card-cascade narrower': true }">
-          <!--Table Header Image-->
-          <div
-            class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
-            <a href="" class="white-text mx-3">Payment Information</a>
-          </div>
-          <!--/Card image-->
-          <!-- Table Content -->
-          <div id="iChart-payment-estimatescatter" class="iChart"></div>
-        </div>
-      </section>
-    </div>
-    <section class="justify-content-center mb-5">
-      <!--Grid row-->
+    <!-- Charts Row 2 -->
+    <section>
       <div class="row">
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-6 my-5">
-          <!--Card-->
-          <panel header="Hospital Type" class="iPanel">
-            <!--Card content-->
-            <div class="card-body text-center">
-              <div id="iChart-geninfo-hospitaltype" class="iChart"></div>
-            </div>
-            <!--/.Card content-->
-          </panel>
-          <!--/.Card-->
+        <!-- First Column-->
+        <div class="col-lg-6 col-md-12">
+          <!-- Panel -->
+          <div class="my-5">
+            <mdb-card class="izCard">
+              <mdb-card-body>
+                <!--Title-->
+                <mdb-card-title>
+                  <div class="row">
+                    <div class="col-9">
+                      <h4>Average Payments & Estimates By State</h4>
+                    </div>
+                    <div class="col-3">
+                      <div class="dropdown" mdbDropdown>
+                        <a mdbDropdownToggle class="dropdown-toggle activator px-3 mr-2" id="ellipse-menu1"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-h"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-primary dropdown-menu-right">
+                          <a class="dropdown-item waves-effect waves-light" href="#">View More</a>
+                          <a class="dropdown-item waves-effect waves-light" href="#">Export</a>
+                          <a class="dropdown-item waves-effect waves-light" href="#">Share</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mdb-card-title>
+                <hr>
+                <!--Izenda Report Part Area -->
+                <div id="iChart-avgpayment-line" class="iChart"></div>
+              </mdb-card-body>
+            </mdb-card>
+          </div>
         </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-lg-6 col-md-6 my-5">
-          <!--Card-->
-          <panel header="Hospital Ownership" class="iPanel">
-            <!--Card content-->
-            <div class="card-body text-center">
-              <div id="iChart-geninfo-hospitalownership" class="iChart"></div>
-            </div>
-            <!--/.Card content-->
-          </panel>
-          <!--/.Card-->
+        <!-- Second Column-->
+        <div class="col-lg-6 col-md-12">
+          <!-- Panel-->
+          <div class="my-5">
+            <mdb-card class="izCard">
+              <mdb-card-body>
+                <!--Title-->
+                <mdb-card-title>
+                  <div class="row">
+                    <div class="col-9">
+                      <h4>Average Hospital Rating By State</h4>
+                    </div>
+                    <div class="col-3">
+                      <div class="dropdown" mdbDropdown>
+                        <a mdbDropdownToggle class="dropdown-toggle activator px-3 mr-2" id="ellipse-menu1"
+                          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-h"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-primary dropdown-menu-right">
+                          <a class="dropdown-item waves-effect waves-light" href="#">View More</a>
+                          <a class="dropdown-item waves-effect waves-light" href="#">Export</a>
+                          <a class="dropdown-item waves-effect waves-light" href="#">Share</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mdb-card-title>
+                <hr>
+                <!--Izenda Report Part Area -->
+                <div id="iChart-hospitalrating-line" class="iChart"></div>
+              </mdb-card-body>
+            </mdb-card>
+          </div>
         </div>
-        <!--Grid column-->
       </div>
-      <!--Grid row-->
     </section>
   </div>
+  <!-- End Dashboard Content -->
 </main>

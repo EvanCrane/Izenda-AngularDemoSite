@@ -7,7 +7,7 @@ import { IzendaReportParts } from '../../../helpers/izenda.reportparts';
   templateUrl: './edu-dashview1.component.html',
   styleUrls: ['./edu-dashview1.component.css']
 })
-export class EducationDashview1Component implements AfterViewInit {
+export class EduDashview1Component implements AfterViewInit {
 
   rParts: any = {
     part1: {

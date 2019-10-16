@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+<main>
+  <!-- Dashboard Content -->
+  <div class="container-fluid">
+    <!-- Page Header -->
+    <div class="page-header row no-gutters">
+      <h1>Insurance and Planfinder Analytics</h1>
+    </div>
+    <!-- Stat Cards-->
+    <app-stats-card2></app-stats-card2>
+    <!-- Charts Content -->
+    <div class="row">
+      <div class="col col-lg-8 col-md-12 col-sm-12 mb-4">
+        <!-- Larger Chart Area-->
+        <section>
+          <cascading-card title="Created & Modified Issues" alignment="left">
+            <div class="card-body">
+              <!--Chart Content-->
+              <div id="iChart-issuesovertime-line1" class="iChart"></div>
+              <!-- Full Report Link-->
+              <button class="btn-flat grey lighten-2 btn-rounded waves-effect float-right dark-grey-text">Full
+                Report <mdb-icon fas icon="arrow-right" class="pr-3" aria-hidden="true"></mdb-icon>
+              </button>
+            </div>
+          </cascading-card>
+        </section>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <!-- Smaller Chart Area-->
+        <section>
+          <cascading-card alignment="center" title="Plan Types Chosen">
+            <div class="card-body">
+              <!--Chart Area-->
+              <div id="iChart-planfinder-ring1" class="iChart"></div>
+            </div>
+          </cascading-card>
+        </section>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <!--Table Area-->
+        <section>
+          <cascading-card alignment="center" title="Total Enrollment by State">
+            <div class="card-body">
+              <!-- Table Part Area-->
+              <div class="table-responsive">
+                <div id="iGrid-medicaretable-grid1" class="iTable"></div>
+              </div>
+            </div>
+          </cascading-card>
+        </section>
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
+        <!-- Larger Map or Chart Area-->
+        <section>
+          <cascading-card>
+            <div class="view view-cascade gradient-card-header blue-gradient">
+              <!-- Large Chart or Map Area-->
+              <h5 class="pb-2">State Coverage Rate Change</h5>
+              <div id="iChart-uninsured-scatter1" class="iChart"></div>
+            </div>
+          </cascading-card>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- End Dashboard Content -->
+</main>
