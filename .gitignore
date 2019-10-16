@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Angular Bootstrap Pro Package
+ng-uikit-pro-standard-8.4.0.tgz
