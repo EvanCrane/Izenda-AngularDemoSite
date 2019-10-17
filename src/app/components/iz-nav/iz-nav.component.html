@@ -1,1 +1,45 @@
-<p>iz-nav works!</p>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-md scrolling-navbar double-nav top-nav" [containerInside]="false">
+  <logo class="iz-logo">
+    <!-- Logo -->
+
+    <div class="logo-wrapper waves-light">
+      <a [routerLink]="['/home']" style="font-size: 16px;">
+        <mdb-icon fas icon="arrow-left"></mdb-icon> Go Home
+      </a>
+    </div>
+
+    <!--/. Logo -->
+  </logo>
+
+  <logo>
+    <!-- Breadcrumb-->
+    <div class="breadcrumbs breadcrumb-dn mr-auto">
+      <p>Izenda Angular Demo</p>
+    </div>
+    <!--/. Breadcrumb-->
+  </logo>
+  <!-- Navbar brand -->
+  <navlinks>
+    <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngIf="!(isAuthenticated | async)"
+        class="nav-item">
+        <a [routerLink]="['/login']" class="nav-link waves-effect waves-light" href="javascript:void(0)">Log in</a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" *ngIf="!(isAuthenticated | async)"
+        class="nav-item active">
+        <a [routerLink]="['/register']" class="nav-link waves-effect waves-light" href="javascript:void(0)">Register</a>
+      </li>
+      <li *ngIf="(isAuthenticated | async)" class="nav-item">
+        <a class="nav-link waves-effect waves-light" href="javascript:void(0)" (click)="logout()" mdbwaveseffect>
+          <span class="clearfix d-none d-sm-inline-block">Log out</span></a>
+      </li>
+      <li *ngIf="(isAuthenticated | async)" class="nav-item">
+        <a class="nav-link">
+          <i class="fas fa-user-circle"></i>{{currentUser | async}}
+        </a>
+      </li>
+    </ul>
+  </navlinks>
+</mdb-navbar>
+<!--/.Navbar-->

@@ -1,0 +1,9 @@
+.iz-logo div {
+  max-height: 25px;
+  height: 25px;
+}
+
+/* Overwrite Bootstrap */
+:host ::ng-deep .mdb-navbar>nav {
+  padding-left: 0 !important;
+}
