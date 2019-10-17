@@ -21,6 +21,7 @@ import { DomService } from './services/dom.service';
 import { CanDeactivateGuard } from './guards/can-deactivate.guard';
 
 import { SharedModule } from './shared/shared.module';
+import { ModelsComponent } from './shared/models/models.component';
 import {
   Dashboard,
   DashboardDesigner,
@@ -65,6 +66,7 @@ import { StatsCardComponent } from './components/healthcare/stats-card/stats-car
 import { StatsCard2Component } from './components/healthcare/stats-card2/stats-card2.component';
 import { StatsCard3Component } from './components/healthcare/stats-card3/stats-card3.component';
 import { StatsCard4Component } from './components/healthcare/stats-card4/stats-card4.component';
+import { IzNavComponent } from './components/iz-nav/iz-nav.component';
 
 
 
@@ -110,6 +112,8 @@ import { StatsCard4Component } from './components/healthcare/stats-card4/stats-c
     StatsCard2Component,
     StatsCard3Component,
     StatsCard4Component,
+    ModelsComponent,
+    IzNavComponent
   ],
   imports: [
     BrowserModule,
